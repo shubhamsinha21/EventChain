@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { ethers } from "ethers";
+
+const contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138";
+
+const abi = [
+    "function logAction(string _message)"
+];
 
 function App() {
+  const [message, setMessage] = useState("");
+
+  async function sendTransaction() {
+    if (!window.ethereum) return alert("Install MetaMask");
+
+    const provider = new ethers.BrowserProvider(window.ethereum);
+    const signer = await provider.getSigner();
+
+    const contract = new ethers.Contract(contractAddress, abi, signer);
+
+    const tx = await contract.logAction(message);
+    await tx.wait();
+
+    alert("Transaction sent!");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "40px" }}>
+      <h2>Web3 Event Logger</h2>
+
+      <input
+        placeholder="Enter message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+
+      <button onClick={sendTransaction}>
+        Send to Blockchain
+      </button>
     </div>
   );
 }
