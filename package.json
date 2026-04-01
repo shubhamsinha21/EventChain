@@ -1,0 +1,24 @@
+{
+  "name": "web3-project",
+  "version": "1.0.0",
+  "description": "This project demonstrates how on-chain smart contract events can trigger backend systems, simulating real-world Web3 application architecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhamsinha21/Web3-Wallet-Interaction-Event-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shubhamsinha21/Web3-Wallet-Interaction-Event-System/issues"
+  },
+  "homepage": "https://github.com/shubhamsinha21/Web3-Wallet-Interaction-Event-System#readme",
+  "devDependencies": {
+    "hardhat": "^3.3.0"
+  }
+}

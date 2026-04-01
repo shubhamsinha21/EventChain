@@ -34,7 +34,7 @@ let lastBlock = 0;
 async function listenEvents() {
   const currentBlock = await provider.getBlockNumber();
 
-  const fromBlock = lastBlock === 0 ? currentBlock - 10 : lastBlock;
+  const fromBlock = lastBlock === 0 ? 0 : lastBlock;
 
   const events = await contract.queryFilter(
     "ActionLogged",
@@ -52,6 +52,8 @@ async function listenEvents() {
 
   lastBlock = currentBlock;
 }
+
+console.log("Checking blocks:", fromBlock, "to", currentBlock);
 
 // Poll every 5 seconds
 setInterval(listenEvents, 5000);
