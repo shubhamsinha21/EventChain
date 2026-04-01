@@ -140,6 +140,5 @@ which is critical for:
 
 ## 🤝 Author
 
-Shubham S  
+Shubham Sinha
 AI/ML Engineer → Exploring Web3 Systems
-
