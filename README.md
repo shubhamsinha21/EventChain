@@ -88,3 +88,58 @@ to ensure:
 ---
 
 ## 📂 Project Structure
+/frontend
+/backend
+/contracts
+/hardhat (setup)
+
+
+---
+
+## 🔐 Security Note
+
+- No private keys stored in code
+- MetaMask used for transaction signing
+- Safe interaction via browser wallet
+
+---
+
+## 🧪 Learnings
+
+- Handling RPC limitations (block range constraints)
+- Event detection using polling vs filters
+- Network mismatches (Mainnet vs Testnet)
+- Smart contract ↔ backend integration challenges
+
+---
+
+## 💡 Why This Project Matters
+
+Most beginner projects stop at UI + contract interaction.
+
+This project explores:
+
+> **How blockchain systems integrate with backend services**
+
+which is critical for:
+- Notifications
+- Automation systems
+- Analytics pipelines
+- Real-world Web3 applications
+
+---
+
+## 📌 Future Improvements
+
+- Real backend workflow integration (DB / queue)
+- WebSocket-based event streaming
+- Multi-chain support (Ethereum + Solana)
+- Transaction history UI
+
+---
+
+## 🤝 Author
+
+Shubham S  
+AI/ML Engineer → Exploring Web3 Systems
+
