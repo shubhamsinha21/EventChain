@@ -140,4 +140,4 @@ which is critical for:
 
 ## 🤝 Author
 
-Shubham Sinha -> (AI/ML Engineer | Exploring Web3 Systems)
+Shubham Sinha -> (Ex - AI/ML Engineer)
